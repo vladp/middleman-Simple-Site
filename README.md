@@ -14,10 +14,18 @@ quickly create a prototype for a future dynamic web site.
 I had also included the latest 3x version of [Bootstrap-sass](https://github.com/twbs/bootstrap-sass)  and generated bootstrap-custom.scss to allow to include only specific stylesheets 
  
 
+Take a look at screenshot.jpg to see how it looks -- it is essentialy
+a single page application layout template
+
+
 ## It can be Responsive!
 The Susy-next grid system, as you know is a very powerful styling mechanism that allows a developer to define how the site should look depending on the given browser window size
 
 I do not have currently the 'Susy-breakpoints' enabled to switch layouts in application.scss as it is done in Amicus. But will add that use case over time.
+
+The bootstrap navigation menue is set to be responsive. As you change
+the screen size the menu changes to be more friendly for phone/tablet
+screens
 
 
 ## How do I use it?

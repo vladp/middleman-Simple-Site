@@ -8,7 +8,7 @@
   %head
     %meta{:charset => "utf-8"}
     %meta{'http-equiv' => "X-UA-Compatible", :content =>"IE=edge"}
-
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
     -# Pull in the page title
     %title= current_page.data.title
 
@@ -36,15 +36,83 @@
 
     = javascript_include_tag "plugins", "script"
 
-  %head
-    %nav= "navigaton menue placeholder"
-       
 
+    /[if lt IE 9]
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    %link{:href => "favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    %link{:href => "apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}/
+    %link{:href => "apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
+
+
+    
+    / CSS code from Bootply.com editor
+    :css
+      .navbar-collapse:before, .navbar-collapse:after{display:inline; content:"";}
+
+
+    
+  
+  
   %body
     /[if lt IE 8]
       %p.browsehappy
         You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
 
+    %nav.navbar.navbar-inverse{:role => "navigation"}
+      / Brand and toggle get grouped for better mobile display
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %button.navbar-toggle{"data-target" => ".navbar-ex2-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => "#"} Brand
+      / Collect the nav links, forms, and other content for toggling
+      .collapse.navbar-collapse.navbar-ex1-collapse
+        %ul.nav.navbar-nav
+          %li.active
+            %a{:href => "#"} Link
+          %li
+            %a{:href => "#"} Link
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              Dropdown-A
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "#"} Action
+              %li
+                %a{:href => "#"} Another action
+              %li
+                %a{:href => "#"} Something else here
+              %li
+                %a{:href => "#"} Separated link
+              %li
+                %a{:href => "#"} One more separated link
+      .collapse.navbar-collapse.navbar-ex2-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a{:href => "#"} Link
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              Dropdown-B
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "#"} Action
+              %li
+                %a{:href => "#"} XAnother action
+              %li
+                %a{:href => "#"} Something else here
+              %li
+                %a{:href => "#"} Separated link
+      / /.navbar-collapse
     
         
     = yield
