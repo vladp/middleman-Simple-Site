@@ -1,14 +1,3 @@
-###
-# Compass
-###
-
-# Susy grids in Compass
-require 'susy'
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
 
 ###
 # Haml
@@ -27,7 +16,7 @@ require 'susy'
 
 
 #added for live reload (first had enable in Gemfile)
-activate :livereload, :apply_js_live => true, :grace_period => 0.5
+activate :livereload,  :apply_js_live => true, :grace_period => 0.5
 
 
 

@@ -9,23 +9,8 @@
 @import "config";
 
 @import "base/elements";
-@import "bootstrap";
-@import "bootstrap/theme";
 
-
-
-
-.container {
-  background-color: #fbeecb;
-  width: auto;
-}
-
-.ag1, .ag3 {
-  background-color: #71dad2;
-}
-
-
-
+@import "bootstrap-custom";
 
 // Complex AG tests
 // ----------------
@@ -34,9 +19,7 @@
   $class
 ) {
   .#{$class} {
-// if enabled it shows the grid, but the grid is screwing up the relatives
-// width. so I only turn it out to count number of columns
-//vsp    @include container(show);
+    @include container(show);
     @include leader(.5);
     @include trailer(.5);
 

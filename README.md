@@ -48,7 +48,7 @@ Finally, ``` cd my_new_project ``` and do a ```bundle install --binstubs ./bin  
 
 
 
-Use ```./bin/middleman``` to do your live development and ```./bin/middleman build``` to render your static file output to the ```/build/``` directory.
+Use ```./bin/middleman server -h '127.0.0.1' ``` to do your live development and ```./bin/middleman build``` to render your static file output to the ```/build/``` directory.
 
 For full Middleman documentation, visit the [Middleman website](http://middlemanapp.com/).
 
